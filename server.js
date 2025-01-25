@@ -13,8 +13,8 @@ app.use(cors());
 // Sample graph
 const graph = {
   Coimbatore: { Madurai: 207, Rameshwaram: 379 },
-  Madurai: { Coimbatore: 207, Dindugal: 152 },
-  Dindugal: { Madurai: 152, Rameshwaram: 231 },
+  Madurai: { Coimbatore: 207, Dindugal: 64 },
+  Dindugal: { Madurai: 64, Rameshwaram: 231 },
   Rameshwaram: { Coimbatore: 379, Dindugal: 231 },
 };
 
