@@ -1,44 +1,209 @@
-<!-- Route Planner
-Implement Dijkstra's or A* algorithm to find the shortest path between two points on a map using graphs. -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Route Planner</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <title>Travel with Route Planner</title>
+    <link rel="stylesheet" href="style1.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
   </head>
   <body>
-    <div class="container">
-      <h1>Route Planner</h1>
-      <div class="form-container">
-        <label for="start">Start Point:</label>
-        <input
-          type="text"
-          id="start"
-          placeholder="Enter start point (e.g., Coimbatore)"
-        />
+    <div class="hero">
+      <h1 class="floating">Explore the World with Ease</h1>
+      <p class="floating">
+        Find the shortest and best routes to your destination with our smart
+        route planner.
+      </p>
+      <a href="#content" class="btn floating">Start Planning</a>
+    </div>
+    <div id="content" class="content">
+      <h2>Why Travel?</h2>
+      <p>
+        Travel opens doors to new experiences, cultures, and adventures. Whether
+        you're exploring bustling cities, scenic landscapes, or hidden gems,
+        every journey creates unforgettable memories.
+      </p>
 
-        <label for="goal">End Point:</label>
-        <input
-          type="text"
-          id="goal"
-          placeholder="Enter end point (e.g., Rameshwaram)"
-        />
+      <div class="content-container">
+        <div class="content-box">
+          <img src="images/madurai.png" alt="madurai" />
+          <h3>Madurai, Tamilnadu</h3>
+          <p>
+            Madurai is home to the famous Meenakshi Amman Temple and has a rich
+            cultural heritage. It’s known for its bustling markets and age-old
+            traditions.
+          </p>
+        </div>
 
-        <button id="find-path">Find Shortest Path</button>
+        <div class="content-box">
+          <img src="images/sivanga.png" alt="sivaganga" />
+          <h3>Sivaganga, Tamilnadu</h3>
+          <p>
+            Sivagangai is known for its rich cultural heritage and is home to
+            historical sites like the Sivagangai Fort. It is a district where
+            tradition and modernity coexist, offering a unique experience for
+            travelers.
+          </p>
+        </div>
+
+        <div class="content-box">
+          <img src="images/kanya.png" alt="kanyakumari" />
+          <h3>Kanyakumari, Tamilnadu</h3>
+          <p>
+            Kanyakumari, the southernmost tip of India, is famous for its
+            spectacular sunrise and sunset views where the three seas meet. It's
+            also home to the Vivekananda Rock Memorial.
+          </p>
+        </div>
       </div>
+      <div class="content-container">
+        <div class="content-box">
+          <img src="images/chennai.png" alt="chennai" />
+          <h3>Chennai, Tamilnadu</h3>
+          <p>
+            Discover and explore more places such as harbour,beach,lighthouse in
+            Chennai.
+          </p>
+        </div>
 
-      <div id="map"></div>
+        <div class="content-box">
+          <img src="images/kovai.png" alt="coimbatore" />
+          <h3>Coimbatore, Tamilnadu</h3>
+          <p>
+            Coimbatore is a major industrial hub with a rich history in textile
+            manufacturing. Surrounded by the Western Ghats, it's also known for
+            its picturesque landscapes.
+          </p>
+        </div>
 
-      <div class="result">
-        <h2>Shortest Path</h2>
-        <p id="path-result">No path calculated yet.</p>
+        <div class="content-box">
+          <img src="images/tirunelveli.png" alt="tirunelveli" />
+          <h3>Tirunelveli, Tamilnadu</h3>
+          <p>
+            Tirunelveli is famous for its ancient temples, such as the
+            Nellaiappar Temple, and its rich culture. It's known for the scenic
+            beauty of the nearby Western Ghats and the famous Irukkankudi
+            waterfalls.
+          </p>
+        </div>
+      </div>
+      <div class="content-container">
+        <div class="content-box">
+          <img src="images/thanjoor.png" alt="thanjoor" />
+          <h3>Thanjavur, Tamilnadu</h3>
+          <p>
+            Tanjore is known for its grand Brihadeeswarar Temple, a UNESCO World
+            Heritage site. The district is also famous for its classical music
+            and dance forms.
+          </p>
+        </div>
+
+        <div class="content-box">
+          <img src="images/ooty.png" alt="ooty" />
+          <h3>Ooty, Tamilnadu</h3>
+          <p>
+            Ooty, also known as Udhagamandalam, is a hill station in the Nilgiri
+            Hills. Known for its lush tea plantations and scenic landscapes, it
+            is a popular destination for nature lovers.
+          </p>
+        </div>
+
+        <div class="content-box">
+          <img src="images/trichy.png" alt="trichy" />
+          <h3>Trichy, Tamilnadu</h3>
+          <p>
+            Trichy is famous for the Ranganathaswamy Temple and the Rock Fort
+            Temple. It is a city with a deep history and a strong spiritual
+            vibe.
+          </p>
+        </div>
+      </div>
+      <div class="content-container">
+        <div class="content-box">
+          <img src="images/salem.png" alt="salem" />
+          <h3>Salem, Tamilnadu</h3>
+          <p>
+            Salem is known for its steel industry, scenic landscapes, and the
+            Yercaud hill station. It’s a quiet yet vibrant city surrounded by
+            hills and lakes.
+          </p>
+        </div>
+
+        <div class="content-box">
+          <img src="images/erode.png" alt="erode" />
+          <h3>Erode, Tamilnadu</h3>
+          <p>
+            Erode is known as the “Manchester of South India” for its textile
+            industries. It's also famous for its agriculture and ancient
+            temples.
+          </p>
+        </div>
+
+        <div class="content-box">
+          <img src="images/vellore.png" alt="vellore" />
+          <h3>Vellore, Tamilnadu</h3>
+          <p>
+            Vellore is known for the famous Vellore Fort and the Christian
+            Medical College, making it a hub for education, healthcare, and
+            tourism.
+          </p>
+        </div>
+      </div>
+      <div class="content-container">
+        <div class="content-box">
+          <img src="images/pudukotta.png" alt="pudukotta" />
+          <h3>Pudukottai, Tamilnadu</h3>
+          <p>
+            Pudukkottai is known for its ancient temples and the scenic
+            Kunnandarkoil hills. It has a rich history dating back to the Chola
+            dynasty.
+          </p>
+        </div>
+
+        <div class="content-box">
+          <img src="images/tharmapuri.png" alt="tharmapuri" />
+          <h3>Tharmapuri, Tamilnadu</h3>
+          <p>
+            Dharmapuri is known for its beautiful landscapes, hill stations like
+            Hogenakkal Falls, and the rich cultural heritage of the region. It's
+            also a major agricultural hub producing mangoes and guavas.
+          </p>
+        </div>
+
+        <div class="content-box">
+          <img src="images/dindugul.png" alt="dindugul" />
+          <h3>Dindugul, Tamilnadu</h3>
+          <p>
+            Dindigul is famous for its historical fort, picturesque landscapes,
+            and the delicious Dindigul biryani. The district is surrounded by
+            lush hills, and it’s a gateway to the Western Ghats.
+          </p>
+        </div>
       </div>
     </div>
-
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="script.js"></script>
+    <div class="social-icons">
+      <a href="https://github.com/sridhar311" target="_blank"
+        ><i class="fab fa-github"></i
+      ></a>
+      <a href="https://www.linkedin.com/in/r-sridhar-5324b52a6/" target="_blank"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+      <a href="https://instagram.com/curiousity_freak" target="_blank"
+        ><i class="fab fa-instagram"></i
+      ></a>
+    </div>
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
   </body>
 </html>
